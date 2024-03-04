@@ -1,11 +1,13 @@
 <template>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <div class="container-fluid">
     <div class="row my-5">
       <div class="col-lg-6">
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body">
-              <h2>Pengunjung</h2>
+            
+              <h2>pengunjung</h2>
             </div>
           </div>
         </nuxt-link>
@@ -22,22 +24,79 @@
       </div>
     </div>
   </div>
+
+<h1><center> statistik</center></h1>
+
+    <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-lg-6">
+        <nuxt-link to="/pengunjung">
+          <div class="card bg-pengunjung2 rounded-5">
+            <div class="card-body">
+              <h2>Pengunjung</h2>
+            </div>
+          </div>
+        </nuxt-link >
+      </div>
+
+      <div class="col-lg-6">
+        
+          <div class="card bg-buku2 rounded-5">
+            <div class="card-body">
+              <h2>Buku</h2>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  <div>
+  <ChartComponents />
+  </div>
 </template>
 
 <style scoped>
 .card {
   height: 250px;
+  width: 500px;
   box-shadow: 1px 1px 10px #424242;
 }
 
+h2{
+  color: white;
+}
 .card.bg-pengunjung {
-  background-image: url('../assets/img/bg-home-kunjungan.jpeg');
+  margin-top: 1%;
+  margin-left:30%;
+  background-image: url('../asset/img/bg2.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: center;
+  background-size: cover center;
+
 }
 .card.bg-buku {
-  background: url('../assets/img/bg-home-cari-buku.jpg') no-repeat center center;
-  background-size: cover;
+  margin-top: 1%;
+  margin-left:20%;
+  background-image: url('../asset/img/bg2.jpg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover center;
+}
+.card.bg-pengunjung2 {
+  margin-top: 1%;
+  margin-left:40%;
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover center;
+
+}
+.card.bg-buku2 {
+  margin-top: 1%;
+  margin-left:10%;
+  background-color: green;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover center;
 }
 </style>

@@ -4,13 +4,21 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">RIWAYAT KUNJUNGAN</h2>
         <div class="my-3">
-          <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
+          <div class="mb-3">
+            <select class="form-control form-control-lg form-select rounded-5">
+                  <option value="">Filter...</option>
+                  <option value="1">NAMA</option>
+                  <option value="2">KEANGGOTAAN</option>
+                  <option value="3">WAKTU</option>
+                  <option value="4">KEPERLUAN</option>
+                </select>
+              </div>
         </div>
         <div class="my-3 text-muted">menampilkan 1 dari 1</div>
         <table class="table">
           <thead>
             <tr>
-              <td>#</td>
+              <td>NO</td>
               <td>NAMA</td>
               <td>KEANGGOTAAN</td>
               <td>WAKTU</td>

@@ -54,7 +54,14 @@
               <option value="kembalikan">Kembalikan Buku</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">KIRIM</button>
+          <div >
+            <nuxt-link to="/pengunjung">
+              <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">KIRIM</button>
+            </nuxt-link>
+            <nuxt-link to="../">
+              <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5"style="position:center;">KEMBALI</button>
+            </nuxt-link>
+            </div>
         </form>
       </div>
     </div>
