@@ -17,7 +17,7 @@
             />
           </form>
         </div>
-        <div class="my-3 text-muted">menampilkan 1 dari 1</div>
+        <div>menampilkan {{ books.length }} buku</div>
         <div class="row">
           <div v-for="(book, i) in books" key="i" class="col-lg-2">
             <div class="card mb-4">
@@ -31,14 +31,14 @@
     </div>
   </div>
   <nuxt-link to="../"
-            ><button
-              type="submit"
-              class="btn btn-lg rounded-5 px-5 bg-secondary text-white"
-              style="float: right"
-            >
-              KEMBALI
-            </button></nuxt-link
-          >
+    ><button
+      type="submit"
+      class="btn btn-lg rounded-5 px-5 bg-secondary text-white"
+      style="float: right"
+    >
+      KEMBALI
+    </button></nuxt-link
+  >
 </template>
 
 <style scoped>
@@ -57,7 +57,7 @@
 
 <script setup>
 const supabase = useSupabaseClient();
-
+const jumlah = ref(0);
 const books = ref([]);
 const keyword = ref([]);
 
@@ -69,7 +69,15 @@ const getBooks = async () => {
   if (data) books.value = data;
 };
 
+const ambillbuku = async () => {
+  const { data, count } = await supabase
+    .from("buku")
+    .select("*", { count: "exact" });
+  if (data) jumlah.value = count;
+};
+
 onMounted(() => {
   getBooks();
+  // ambilbuku();
 });
 </script>

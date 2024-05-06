@@ -35,7 +35,8 @@
         <nuxt-link to="/pengunjung">
           <div class="card bg-pengunjung2 rounded-5">
             <div class="card-body">
-              <h2>Pengunjung</h2>
+              <p>jumlah pengunjung</p>
+              {{ jumlahpengunjung }}
             </div>
           </div>
         </nuxt-link>
@@ -45,6 +46,7 @@
         <div class="card bg-buku2 rounded-5">
           <div class="card-body">
             <h2>Buku</h2>
+            {{ jumlahbuku }}
           </div>
         </div>
       </div>
@@ -54,6 +56,31 @@
     <ChartComponents />
   </div>
 </template>
+
+<script setup>
+const supabase = useSupabaseClient();
+const jumlahpengunjung = ref(0);
+const jumlahbuku = ref(0);
+
+async function ambiljumlahpengunjung() {
+  const { data, error, count } = await supabase
+    .from("pengunjung")
+    .select("*", { count: "exact" });
+  if (count) jumlahpengunjung.value = count;
+}
+
+async function ambiljumlahbuku() {
+  const { data, error, count } = await supabase
+    .from("buku")
+    .select("*", { count: "exact" });
+  if (count) jumlahbuku.value = count;
+}
+
+onMounted(() => {
+  ambiljumlahpengunjung();
+  ambiljumlahbuku();
+});
+</script>
 
 <style scoped>
 .card {

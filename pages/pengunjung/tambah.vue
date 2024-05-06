@@ -17,11 +17,11 @@
               class="form-control form-control-lg form-select rounded-5"
             >
               <option value="">KEANGGOTAAN</option>
-              <option v-for="(member, i) in members":key="i">
+              <option v-for="(member, i) in members" :key="i" :value="member.id">
                 {{ member.nama }}
               </option></select
-            ><br />
-            <div class="mb-3">
+            >          </div><br />
+            <div class="mb-3" v-if="form.keanggotaan == '2'">
               <div class="row">
                 <div class="col-md-4">
                   <select
@@ -76,7 +76,6 @@
                 </option>
               </select>
             </div>
-          </div>
           <button
             type="submit"
             class="btn btn-lg rounded-5 px-5 bg-primary text-white"

@@ -4,17 +4,18 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">RIWAYAT KUNJUNGAN</h2>
         <div class="my-3">
-          <div class="mb-3">
-            <select class="form-control form-control-lg form-select rounded-5">
-              <option value="">Filter...</option>
-              <option value="1">NAMA</option>
-              <option value="2">KEANGGOTAAN</option>
-              <option value="3">WAKTU</option>
-              <option value="4">KEPERLUAN</option>
-            </select>
-          </div>
+          <form @submit.prevent="getPengunjung">
+            <input
+              v-model="keyword"
+              type="search"
+              class="form-control form-control-lg rounded-5"
+              placeholder="Cari Pengunjung"
+            />
+          </form>
         </div>
-        <div class="my-3 text-muted">menampilkan 1 dari 1</div>
+        <div class="my-3 text-muted">
+          menampilkan {{ visitors.length }} dari {{ jumlah }}
+        </div>
         <table class="table">
           <thead>
             <tr>
@@ -51,17 +52,26 @@
 
 <script setup>
 const supabase = useSupabaseClient();
-
+const jumlah = ref(0);
 const visitors = ref([]);
+const keyword = ref("");
 
 const getPengunjung = async () => {
   const { data, error } = await supabase
     .from("pengunjung")
-    .select(`*, keanggotaan(*), keperluan(*)`);
+    .select(`*, keanggotaan(*), keperluan(*)`)
+    .order("id", { ascending: false });
   if (data) visitors.value = data;
+};
+const totalPengunjung = async () => {
+  const { data, count } = await supabase
+    .from("pengunjung")
+    .select("*", { count: "exact" });
+  if (data) jumlah.value = count;
 };
 
 onMounted(() => {
   getPengunjung();
+  totalPengunjung();
 });
 </script>
