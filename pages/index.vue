@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <h1><center>statistik</center></h1>
+  <h1>statistik</h1>
 
   <div class="container-fluid">
     <div class="row my-5">
