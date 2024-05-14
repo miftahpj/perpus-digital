@@ -1,6 +1,6 @@
 <template>
-<title>HALAMAN MENU</title>
-<link
+  <title>HALAMAN MENU</title>
+  <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   />
@@ -86,9 +86,9 @@ onMounted(() => {
 <style scoped>
 .card {
   height: 250px;
-  width: 750px;
   box-shadow: 1px 1px 10px #424242;
-  margin-left:7%;
+  margin-top: 10px;
+  margin-left: 7%;
 }
 h2 {
   color: black;
@@ -110,21 +110,15 @@ h2 {
   background-size: cover;
 }
 .card.bg-pengunjung2 {
-  height: 250px;
-  width: 400px;
-  box-shadow: 1px 1px 10px #424242;
-  margin-top: 1%;
-  margin-left: 40%;
-  background-color: white;
-  background-size: cover center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 10px;
 }
 .card.bg-buku2 {
-  height: 250px;
-  width: 400px;
-  box-shadow: 1px 1px 10px #424242;
-  margin-top: 1%;
-  margin-left: 10%;
-  background-color: white;
-  background-size: cover center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 10px;
 }
 </style>
