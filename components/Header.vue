@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row p-3 bg-primary text-white">
     <div class="col-lg-1">
-      <img src="/asset/img/SMKN4.png" alt="logo SMKN 4">
+      <img src="/asset/img/SMKN4.webp" alt="logo SMKN 4">
     </div>
 
     <div class="col-lg-11">
