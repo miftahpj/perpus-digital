@@ -1,5 +1,6 @@
 <template>
-  <link
+<title>HALAMAN MENU</title>
+<link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   />
@@ -45,7 +46,7 @@
       <div class="col-lg-6">
         <div class="card bg-buku2 rounded-5">
           <div class="card-body">
-            <h2>Buku</h2>
+            <h2>jumlah Buku</h2>
             {{ jumlahbuku }}
           </div>
         </div>
@@ -84,13 +85,13 @@ onMounted(() => {
 
 <style scoped>
 .card {
-  height: 300px;
-  width: 900px;
+  height: 250px;
+  width: 750px;
   box-shadow: 1px 1px 10px #424242;
+  margin-left:7%;
 }
-
 h2 {
-  color: white;
+  color: black;
 }
 .card.bg-pengunjung {
   margin-top: 1%;
@@ -114,9 +115,7 @@ h2 {
   box-shadow: 1px 1px 10px #424242;
   margin-top: 1%;
   margin-left: 40%;
-  background-color: yellow;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: white;
   background-size: cover center;
 }
 .card.bg-buku2 {
@@ -125,9 +124,7 @@ h2 {
   box-shadow: 1px 1px 10px #424242;
   margin-top: 1%;
   margin-left: 10%;
-  background-color: green;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: white;
   background-size: cover center;
 }
 </style>
