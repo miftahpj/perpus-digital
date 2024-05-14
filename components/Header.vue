@@ -15,3 +15,16 @@
   </div>
 </div>
 </template>
+<style scoped>
+img {
+    height: 115px;
+    width: 100px;
+}
+h1{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+address{
+    margin-left: 5px;
+}
+</style>
