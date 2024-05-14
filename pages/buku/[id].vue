@@ -1,4 +1,11 @@
 <template>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU</title>
+</head>
+<body>
 <h2 class="text-start my-4">{{ buku.judul }}</h2>
   <div class="row">
     <div class="col-md-3">
@@ -22,6 +29,8 @@
               KEMBALI
             </button></nuxt-link
           >
+</body>
+</html>
 </template>
 <script setup>
 const supabase = useSupabaseClient()
