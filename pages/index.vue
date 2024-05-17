@@ -16,7 +16,9 @@
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body">
-              <h2>pengunjung</h2>
+              <div>
+                <h2>pengunjung</h2>
+              </div>
             </div>
           </div>
         </nuxt-link>
@@ -42,8 +44,10 @@
         <nuxt-link to="/pengunjung">
           <div class="card bg-pengunjung2 rounded-5">
             <div class="card-body">
-              <p>jumlah pengunjung</p>
-              {{ jumlahpengunjung }}
+              <div class="h2">
+                <p>jumlah pengunjung</p>
+                {{ jumlahpengunjung }}
+              </div>
             </div>
           </div>
         </nuxt-link>
@@ -93,6 +97,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+*{
+  text-decoration:none;
+}
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;
