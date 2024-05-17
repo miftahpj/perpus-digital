@@ -27,7 +27,7 @@
             <div>menampilkan {{ books.length }} buku</div>
             <div class="row">
               <div v-for="(book, i) in books" key="i" class="col-lg-2">
-                <div class="card mb-4">
+                <div class="card mb-3">
                   <NuxtLink :to="`/buku/${book.id}`">
                     <img :src="book.cover" class="cover" alt="cover" />
                   </NuxtLink>
@@ -51,21 +51,36 @@
 </template>
 
 <style scoped>
-.card-body {
-  width: 100%;
-  height: 250%;
-  padding: 0;
-}
-.cover {
-  width: 100%;
-  height: 100%;
-  objetc-fit: cover;
-  objetc-position: 0 30;
 
-  .button {
-    position: fixed;
-  }
+.card-body img {
+  width: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
+
+.cover {
+  height: 350px;
+  width: 250px;
+  object-fit: cover;
+  object-position: 0 30;
+  border: none;
+}
+
+.card {
+  border: none;
+
+}
+  button {
+    border: 1px solid #000;
+    background-color: #265cb5;
+    color: #fff;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 20px;
+  }
+
 </style>
 
 <script setup>
