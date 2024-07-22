@@ -65,6 +65,7 @@
   object-fit: cover;
   object-position: 0 30;
   border: none;
+  margin-left: 1%;
 }
 
 .card {
